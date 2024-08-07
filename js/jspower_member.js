@@ -97,6 +97,14 @@ $(".member-check").on("click", () => {
   $(".member-all").prop("checked", $(".member-check").filter(":checked").length === 3);
 });
 
+//나이제한 호버
+$(".member-age").on("mouseenter", () => {
+  $(".member-ageMent").css('display', 'block');
+})
+$(".member-age").on("mouseleave", () => {
+  $(".member-ageMent").css('display', 'none');
+})
+
 //모달창구현
 const $modal = $('#member-modal'); //모달창
 const $open = $('#member-openModal'); //열기버튼(클릭시 모달창 display : block)
@@ -112,9 +120,7 @@ $open.on('click', () => {
   $modal.addClass('show'); // 모달을 열 때 'show' 클래스를 추가하여 애니메이션 시작
 });
 
-// // 모달 닫기
+//모달 닫기
 $close.on('click', () => {
   $modal.removeClass('show'); // 모달을 닫을 때 'show' 클래스를 제거하여 애니메이션 시작
 });
-
-
