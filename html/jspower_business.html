@@ -1,0 +1,76 @@
+<!-- 비즈니스 회원가입 페이지 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비즈니스 회원가입</title>
+  <link rel="stylesheet" href="./../css/jspower_business.css">
+  <script defer src="./../js/jspower_business.js"></script>
+</head>
+<body>
+    <form id="business-signup">
+      <h2>회사정보</h2>
+      <div class="business-form-group">
+        <label for="business-id">회사명</label>
+        <input type="text" id="business-id" required>
+        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      </div>
+      <div class="business-form-group">
+        <label for="business-number">사업자 등록 번호 (선택사항)</label>
+        <input type="text" id="business-number">
+      </div>
+      <div class="business-form-group">
+        <label for="business-segment">산업 분야 (선택사항)</label>
+        <select id="business-select"> 
+        <option value=""></option> 
+        <option value="숙박업">숙박업</option> 
+        <option value="음식점업">음식점업</option> 
+        <option value="소매업">소매업</option> 
+        <option value="서비스업">서비스업</option> 
+        <option value="교육서비스업">교육서비스업</option>
+        <option value="보건업">보건업</option>
+        <option value="제조업">제조업</option>
+        <option value="여가 관련 서비스업">여가 관련 서비스업</option>
+        <option value="건설업">건설업</option>
+        <option value="기타">기타</option>
+        </select> 
+      </div>
+      <button type="button"><strong>우편번호 찾기</strong></button>
+      <!-- 대표 연락처 -->
+      <h2>대표 연락처</h2>
+      <div class="business-form-group">
+        <label for="business-lastname">성</label>
+        <input type="text" id="business-lastname" required>
+        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      </div>
+      <div class="business-form-group">
+        <label for="business-firstname">이름</label>
+        <input type="text" id="business-firstname" required>
+        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      </div>
+      <div class="business-form-group">
+        <label for="business-email">이메일</label>
+        <input type="text" id="business-email" required>
+        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      </div>
+      <div class="business-form-group">
+        <label for="business-password">비밀번호</label>
+        <input type="password" id="business-password" required>
+        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      </div>
+      <div class="business-choice-group">
+        <label>
+          <input type="checkbox" name="choice" id="choice" value="yes"><a href="#">구매 내역과 프로필을 기반으로 한 할인 정보 및
+            관련 소식들을 이메일<br>로 받고 싶습니다. 구독은 언제든지 취소할 수 있습니다.<u>이메일 구독<br>더 읽어보기</u><br>
+        </label>
+        <label>
+          <input type="checkbox" name="choice" id="choice" value="yes">나는 나의 회사를 대표하여 다음을 확인합니다.<a href="https://www.ikea.com/kr/ko/customer-service/terms-conditions/"><u>이용약관</u></a><br>
+        </label>
+        <label>
+          <input type="checkbox" name="choice" id="choice" value="yes"><a href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/privacy-policy-pub20a57ecd"></a><u>개인 정보 수집 및 이용</u></a>에 동의합니다
+        </label>
+      </div>
+    </form>
+</body>
+</html>
