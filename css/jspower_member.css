@@ -62,6 +62,21 @@ input, select{
   width: 450px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+.member-ageMent{
+  width: 174.5px;
+  height: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: .7rem;
+  letter-spacing: -0.3px;
+  position: absolute;
+  top: -50px;
+  right: -85px;
+  display: none;
 }
 .member-age{
   width: 15px;
@@ -74,6 +89,9 @@ input, select{
   color: white;
   font-weight: bold;
   font-size: 12px;
+  position: relative;
+  top: 5px;
+  cursor: pointer;
 }
 .member-dataRule{
   font-size: .75rem;
@@ -146,6 +164,12 @@ input[type=number]::-webkit-outer-spin-button {
 .member-submit{
   display: flex;
   justify-content: center;
+}
+a{
+  text-decoration: none;
+}
+.member-text a{
+  text-decoration: underline;
 }
 .member-essential{
   margin-top: 35px;
@@ -236,7 +260,4 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-a{
-  text-decoration: none;
 }
