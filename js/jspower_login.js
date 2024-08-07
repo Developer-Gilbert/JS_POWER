@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded',  () => {
 document.addEventListener('DOMContentLoaded', () => {
   const signButton = document.getElementById('signup'); 
   signButton.addEventListener('click', () => {
-    window.location.href = 'https://www.ikea.com/kr/ko/';
+    window.location.href = 'jspower_member.html';
   });
 });
 
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const businButton = document.getElementById('businessSignup');
   businButton.addEventListener('click', () => {
-    window.location.href = 'https://www.ikea.com/kr/ko/';
+    window.location.href = 'jspower_business.html';
   })
 })
 
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       setTimeout(() => {
         closeModal(() => {
-          window.location.href = 'https://www.ikea.com/kr/ko/';
+          window.location.href = 'jspower.html';
         });
       }, 1000);
     }
