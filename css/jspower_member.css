@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.199); */
+}
+.member-teamName{
+  font-size: 50px;
+  color: #D7BFFF;
+  margin-top: 25px;
+}
+.member-spaceBlock{
+  width: 448px;
+  height: 32px;
+}
+.member-ment, .member-text, a{
+  letter-spacing: -0.5px;
+  color: gray;
+}
+.member-ment{
+  font-size: 0.9rem;
+  height: 21px;
+  margin-bottom: 8px;
+}
+.member-text, a{
+  font-size: .875rem;
+}
+#member-openModal{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.member-info{
+  width: 500px;
+}
+.member-info .member-text{
+  margin-bottom: 8px;
+}
+input, select{
+  outline: none;
+}
+.member-lastName,
+.member-firstName,
+.member-birthday,
+.member-formBox,
+.member-gender,
+.member-address,
+.member-favoriteMarket,
+.member-email,
+.member-pw{
+  width: 432px;
+  height: 48px;
+  padding: 0 8px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.member-birthBox{
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+.member-age{
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+.member-dataRule{
+  font-size: .75rem;
+  color: gray;
+}
+.member-formBox{
+  display: flex;
+  position: relative;
+}
+.member-countryNum{
+  width: 77px;
+  height: 48px;
+  display: flex;
+  padding-left: 8px;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.member-phone{
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+}
+/* 스피너 버튼 지우기 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.member-gender, .member-favoriteMarket{
+  width: 450px;
+  /* padding: 12px 48px 12px 8px; 화살표 이동 안됨 */
+}
+.member-findAddress{
+  width: 81px;
+  height: 56px;
+  padding: 0 32px;
+  background-color: #D7BFFF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 64px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: -0.7px;
+  cursor: pointer;
+}
+.member-all, .member-check, .member-check1{
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+.member-agreeFrame{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.member-agreeFrame .member-text{
+  font-size: .845rem;
+  margin-bottom: 0;
+}
+.member-agreeChild .member-agreeFrame{
+  width: 408px;
+  height: 24px;
+  margin: 24px 0 20px 40px;
+}
+.member-submit{
+  display: flex;
+  justify-content: center;
+}
+.member-essential{
+  margin-top: 35px;
+}
+.member-submit-button{
+  width: 384px;
+  height: 56px;
+  padding: 0 32px;
+  background-color: #D7BFFF;
+  color: white;
+  border: none;
+  border-radius: 64px;
+  font-size: .875rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.member-notice{
+  color: red;
+  font-size: .75rem;
+  margin-top: 3px;
+  display: none;
+}
+.member-pwFrame{
+  position: relative;
+}
+.member-img{
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 15px;
+  top: 38px;
+  cursor: pointer;
+}
+#member-modal{
+  width: 480px;
+  height: 911px;
+  background-color: white;
+  position: fixed;
+  right: -500px;
+  top: 455px;
+  transform: translateY(-50%);
+  /* border: 1px solid black; */
+  border-radius: 7px;
+  display: block;
+  transition: right 0.5s ease; /* 애니메이션 트랜지션 설정 */
+  border-radius: 7px;
+  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.8);
+  display: block;
+  z-index: 1000;
+}
+#member-modal.show {
+  right: 0; /* 보여질 때의 위치 */
+}
+#member-modal-top{
+  width: 480px;
+  height: 88px;
+  position: relative;
+}
+#member-modal-close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#member-modal-img{
+  display: block;
+  width: 480px;
+  height: 719px;
+}
+#member-modal-bottom{
+  width: 480px;
+  height: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#member-modal-more{
+  width: 368px;
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 64px;
+  cursor: pointer;
+  font-size: .9rem;
+  background-color: #D7BFFF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
