@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 페이지</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./../css/jspower_login.css" />
+</head>
+
+<body>
+  <main>
+    <form>
+      <div class="form-field">
+        <div class="login-input-all">
+          <label for="username" class="" title="이메일 또는 휴대폰 번호">
+            이메일 또는 휴대폰 번호</label>
+          <div class="login-input-wrapper">
+            <input type="text" id="username" class="login-input-all" />
+            <span class="login-input-border"></span>
+            <span class="login-input-error" id="error-message"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-field">
+        <div class="login-input-all">
+          <label for="password" class="" title="비밀번호">비밀번호</label>
+          <div class="login-input-wrapper">
+            <input type="password" id="password" class="login-input-all" />
+            <div class="mark"></div>
+            <span class="login-input-border"></span>
+            <span class="login-input-error" id="error-message-pw"></span>
+          </div>
+        </div>
+      </div>
+      <a name="forgotPassword" href="jspower_findpw.html" class="findpw link">
+        비밀번호 찾기
+      </a>
+      <div class="login-br-block-1"></div>
+      <div class="login-checkbox-all">
+        <span class="checkbox sc-cSHVUG fnwmVX">
+          <input type="checkbox" name="remember-me" id="remember-me" value="" />
+          <span class="login-checkbox-symbol">
+          </span>
+          <span class="login-checkbox-label">
+            <label for="remember-me" class="">로그인 상태 유지</label>
+          </span>
+        </span>
+      </div>
+      <div class="login-br-block-2"></div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>로그인 되었습니다</p>
+        </div>
+      </div>
+      <button type="button" class="btn login-btn">
+        <span class="login-btn-inner">
+          <span class="login-btn-label">로그인</span>
+        </span>
+      </button>
+      <div class="login-br-block-2"></div>
+      <div class="login-br-block-3"></div>
+      <div class="login-btn-txt-block">
+        <h2 class="login-btn-txt-txt">JS-POWER 계정이 없으신가요? 지금 바로 만들어보세요:</h2>
+        <div class="login-br-block-4"></div>
+      </div>
+      <div class="login-btn-txt-block">
+        <button type="button" class="btn login-btn-both" id="signup">
+          <span class="login-btn-inner">
+            <span class="logbtn-label-span">개인 회원 가입하기</span>
+          </span>
+        </button>
+        <div class="login-br-block-5"></div>
+        <button type="button" class="btn login-btn-both" id="businessSignup">
+          <span class="login-btn-inner">
+            <span class="logbtn-label-span">비즈니스 회원 가입하기</span>
+          </span>
+        </button>
+      </div>
+    </form>
+    </div>
+    </div>
+  </main>
+  <script src="./../js/jspower_login.js" defer></script>
+</body>
+
+</html>

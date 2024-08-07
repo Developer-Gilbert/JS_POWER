@@ -1,0 +1,350 @@
+/* 전체 스타일 초기화 */
+body,
+html,
+main {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* 입력 필드 스타일 */
+.form-field {
+  margin-bottom: 0 !important;
+  display: block;
+  width: 100%;
+}
+.login-input-all:focus {
+  outline: none; /* 기본 브라우저 포커스 스타일 제거 */
+}
+
+.login-input-all {
+  color: rgb(var(--colour-text-and-icon-2, 72, 72, 72));
+  width: 100%;
+  display: block;
+  margin: 0 0 0.125rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.8rem;
+  font-size: 0.875rem;
+  line-height: 1.571;
+  border: none;
+  box-sizing: border-box; 
+}
+
+
+.login-input-wrapper {
+  align-items: center;
+  background: rgb(var(--colour-neutral-1, 255, 255, 255));
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 448px;
+}
+
+.login-input-error {
+  color: red; 
+  font-size: 0.75rem; 
+  position: absolute;
+  bottom: -1.0rem; /* 입력 필드 아래쪽에 위치 */
+  left: 0;
+  width: 100%;
+  display: none; /* 기본적으로 숨김 */
+}
+
+/* 기본 테두리 스타일 */
+.login-input-border {
+  border: 1px solid rgb(var(--colour-interactive-subtle-border-default, 146, 146, 146)); 
+  border-radius: 4px;
+  bottom: 0;
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: box-shadow 0.1s cubic-bezier(0.4, 0, 0.4, 1), border 0.1s cubic-bezier(0.4, 0, 0.4, 1);
+  width: 100%;
+}
+
+/* 포커스 상태에서 기본 테두리만 보이게 하는 스타일 */
+.login-input-all:focus + .login-input-border {
+  border: 1px solid rgb(var(--colour-interactive-subtle-border-default, 146, 146, 146)); /* 기본 테두리 색상 */
+}
+
+/* 에러 상태일 때 빨간색 테두리 */
+.input-field--error .login-input-border {
+  border: 1px solid rgb(var(--colour-semantic-negative, 224, 7, 81)); /* 빨간색 테두리 */
+}
+
+/* 올바른 입력일 때 보라색 테두리 */
+.input-field--valid .login-input-border {
+  border: 1px solid purple; /* 보라색 테두리 */
+}
+
+.link {
+  color: rgb(var(--colour-text-and-icon-2, 72, 72, 72));
+}
+
+.findpw {
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  margin-left: 0.7rem;
+}
+
+.login-br-block-1 {
+  height: 32px;
+  width: 100%;
+}
+
+.login-checkbox-all {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.fnwmVX {
+  display: inline-flex !important;
+}
+
+.checkbox input[type='checkbox'] {
+  left: auto;
+  top: auto;
+}
+
+.checkbox input[type='checkbox'] {
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.75rem;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  width: 2.75rem;
+  z-index: 1;
+}
+
+body .login-checkbox-symbol {
+  border-radius: 4px;
+}
+
+.login-checkbox-symbol {
+  align-items: center;
+  background: rgb(var(--colour-neutral-1, 255, 255, 255));
+  border: 1px solid rgb(var(--colour-interactive-subtle-border-default, 146, 146, 146));
+  display: flex;
+  flex-shrink: 0;
+  height: 1.5rem;
+  justify-content: center;
+  position: relative;
+  width: 1.5rem;
+  cursor: pointer; /* 클릭 가능한 커서 추가 */
+}
+
+.login-checkbox-symbol::before {
+  content: '';
+  display: block;
+  width: 100%; 
+  height: 100%; 
+  background: transparent;
+  border-radius: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+input[type="checkbox"]:checked + .login-checkbox-symbol::before {
+  background: #D7BFFF;
+  border-color: rgb(var(--colour-interactive-primary, 0, 122, 255)); /* 체크 시 테두리 색상 */
+}
+
+
+
+body .login-checkbox-label {
+  padding-inline-start: 1.75rem;
+}
+
+.login-checkbox-label {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.571;
+  margin-top: 0.25rem; 
+  padding-inline-start: 1.25rem;
+  position: relative;
+  left: -0.5rem; 
+}
+
+.login-br-block-2 {
+  height: 26px;
+  width: 100%;
+}
+
+.btn {
+  position: relative; /* 테두리를 올바르게 배치하기 위해 상대 위치 지정 */
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+/* 강조 버튼 스타일 */
+.login-btn {
+  color: rgb(var(--colour-static-white, 255, 255, 255));
+  background: #D7BFFF;
+  border-radius: 64px;
+  padding: 0 11rem;
+  min-height: 3.5rem;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+/* 버튼 텍스트 스타일 */
+.login-btn-label {
+  color: white;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.login-br-block-3 {
+  height: 16px;
+  width: 100%;
+}
+.login-btn-txt-block {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.login-btn-txt-txt {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: rgb(var(--colour-text-and-icon-2, 72, 72, 72));
+  font-weight: bold;
+}
+.login-br-block-4 {
+  height: 1.5rem;
+  width: 100%;
+}
+.login-btn-both {
+  background-color: white;
+  width: 100%;
+  border: 2px solid transparent; /* 기본 테두리는 투명으로 설정 */
+  border-radius: 64px; 
+  padding: 0; 
+}
+.login-btn-both .login-btn-inner {
+  border: 1px solid rgb(var(--colour-neutral-7, 17, 17, 17));
+}
+
+.login-btn-inner {
+  align-items: center;
+  border-radius: 64px; 
+  display: flex; 
+  justify-content: center;
+  min-height: 3.5rem;
+  padding: 0 2rem;
+  transition-duration: 0.25s;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  width: 100%;
+}
+
+.logbtn-label-span {
+  transition-duration: 0.2s;
+  transition-property: opacity, margin-right, margin-left, transform, -webkit-transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+}
+.login-br-block-5 {
+  height: 1rem;
+  width: 100%;
+}
+div.mark {
+  background-image: url('./../img/loginclose.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 64px;
+  transition: background-color 0.3s; 
+}
+div.mark:hover {
+  background-color: lightgray; 
+}
+
+
+
+
+/* 모달 배경 스타일 */
+.modal {
+  display: none; /* 모달은 기본적으로 숨겨져 있음 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* 다른 요소 위에 표시되도록 */
+}
+
+/* 모달 내용 스타일 */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 기본적으로 모달이 열릴 때 애니메이션을 적용 */
+  animation: popUp 0.5s;
+}
+
+/* 모달 닫기 버튼 스타일 */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #ff4c4c;
+}
+
+/* 모달 애니메이션 */
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popDown {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
