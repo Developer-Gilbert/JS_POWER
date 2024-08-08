@@ -1,76 +1,170 @@
-<!-- 비즈니스 회원가입 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비즈니스 회원가입</title>
+  <title>비즈니스 멤버 가입</title>
   <link rel="stylesheet" href="./../css/jspower_business.css">
   <script defer src="./../js/jspower_business.js"></script>
 </head>
 <body>
-    <form id="business-signup">
+  <header>
+    <span><h1>JS POWER</h1></span>
+  </header>
+  <main>
+    <form>
+      <span class="b-account">이미 JSPOWER Business Network 계정이 있나요? 
+        <a href="./jspower_login.html" class="b-link" aria-disabled="false">여기에서 로그인하세요</a>
+      </span>
       <h2>회사정보</h2>
-      <div class="business-form-group">
-        <label for="business-id">회사명</label>
-        <input type="text" id="business-id" required>
-        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      <div class="b-input-name">
+        <label id="b-Name-label" for="b-Name">회사명</label>
       </div>
-      <div class="business-form-group">
-        <label for="business-number">사업자 등록 번호 (선택사항)</label>
-        <input type="text" id="business-number">
+      <div class="b-input-field-wrapper">
+        <input type="text" id="b-Name">
+        <span id="NameEmptyError" class="error-message">! 회사명 필드는 필수 필드입니다.</span>
       </div>
-      <div class="business-form-group">
-        <label for="business-segment">산업 분야 (선택사항)</label>
-        <select id="business-select"> 
-        <option value=""></option> 
-        <option value="숙박업">숙박업</option> 
-        <option value="음식점업">음식점업</option> 
-        <option value="소매업">소매업</option> 
-        <option value="서비스업">서비스업</option> 
-        <option value="교육서비스업">교육서비스업</option>
-        <option value="보건업">보건업</option>
-        <option value="제조업">제조업</option>
-        <option value="여가 관련 서비스업">여가 관련 서비스업</option>
-        <option value="건설업">건설업</option>
-        <option value="기타">기타</option>
-        </select> 
+      <div class="b-input-name">
+        <label id="b-Number-label" for="b-Number">사업자 등록 번호 (선택사항)</label>
       </div>
-      <button type="button"><strong>우편번호 찾기</strong></button>
-      <!-- 대표 연락처 -->
-      <h2>대표 연락처</h2>
-      <div class="business-form-group">
-        <label for="business-lastname">성</label>
-        <input type="text" id="business-lastname" required>
-        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
       </div>
-      <div class="business-form-group">
-        <label for="business-firstname">이름</label>
-        <input type="text" id="business-firstname" required>
-        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      <div class="b-input-field-wrapper">
+        <input type="text" id="b-Number" name="vatNumber" aria-required="false">
       </div>
-      <div class="business-form-group">
-        <label for="business-email">이메일</label>
-        <input type="text" id="business-email" required>
-        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      <div class="b-input-name">
+        <label id="b-Segment-label" for="b-Segment">산업 분야 (선택사항)</label>
       </div>
-      <div class="business-form-group">
-        <label for="business-password">비밀번호</label>
-        <input type="password" id="business-password" required>
-        <div id="EmptyError" class="error-message">! 필수 필드입니다.</div>
+      <div class="b-Segment-group">
+        <select id="b-Segment-select"> 
+          <option value=""></option> 
+          <option value="숙박업">숙박업</option> 
+          <option value="음식점업">음식점업</option> 
+          <option value="소매업">소매업</option> 
+          <option value="서비스업">서비스업</option> 
+          <option value="교육서비스업">교육서비스업</option>
+          <option value="보건업">보건업</option>
+          <option value="제조업">제조업</option>
+          <option value="여가 관련 서비스업">여가 관련 서비스업</option>
+          <option value="건설업">건설업</option>
+          <option value="기타">기타</option>
+        </select>
       </div>
-      <div class="business-choice-group">
+      <div class="">
+        <button type="button" class="b-address-button">
+          <span class="b-address-text">우편번호 찾기</span>
+        </button>
+      </div>
+      <!-- 주소 -->
+      <div class="b-input-addrname">
+        <label id="b-Addr-label" for="b-Addr">주소</label>
+      </div>
+      <div class="b-input-field-wrapper">
+        <input type="text" id="b-Addr" required name="Addr" aria-required="true">
+        <span id="AddrEmptyError" class="error-message">! 주소 필드는 필수 필드입니다.</span>
+      </div>
+      <div id="b-phone"><h2>대표 연락처</h2></div>
+      <!-- 성 -->
+      <div class="b-input-lastname">
+        <label id="b-Last-label" for="b-Last">성</label>
+      </div>
+      <div class="b-input-field-wrapper">
+        <input type="text" id="b-Last" required name="Last" aria-required="true">
+        <span id="LastEmptyError" class="error-message">! 성 필드는 필수 필드입니다.</span>
+      </div>
+      <!-- 이름 -->
+      <div class="b-input-firstname">
+        <label id="b-First-label" for="b-First">이름</label>
+      </div>
+      <div class="b-input-field-wrapper">
+        <input type="text" id="b-First" required name="First" aria-required="true">
+        <span id="FirstEmptyError" class="error-message">! 이름 필드는 필수 필드입니다.</span>
+      </div>
+      <!-- 이메일 -->
+      <div class="b-input-email">
+        <label id="b-Email-label" for="b-Email">이메일</label>
+      </div>
+      <div class="b-input-field-wrapper">
+        <input type="email" id="b-Email" required name="Email" aria-required="true">
+        <span class="b-email-message">info@email.com과 같은 일반 이메일 주소는 이메일 수신이 되지 않을 수 있습니다.</span>
+        <span id="EmailEmptyError" class="error-message">! 이메일 필드는 필수 필드입니다.</span>
+      </div>
+      <!-- 비밀번호 -->
+      <div class="b-input-password">
+        <label id="b-Password-label" for="b-Password">비밀번호</label>
+      </div>
+      <div class="b-input-field-wrapper">
         <label>
-          <input type="checkbox" name="choice" id="choice" value="yes"><a href="#">구매 내역과 프로필을 기반으로 한 할인 정보 및
-            관련 소식들을 이메일<br>로 받고 싶습니다. 구독은 언제든지 취소할 수 있습니다.<u>이메일 구독<br>더 읽어보기</u><br>
-        </label>
-        <label>
-          <input type="checkbox" name="choice" id="choice" value="yes">나는 나의 회사를 대표하여 다음을 확인합니다.<a href="https://www.ikea.com/kr/ko/customer-service/terms-conditions/"><u>이용약관</u></a><br>
-        </label>
-        <label>
-          <input type="checkbox" name="choice" id="choice" value="yes"><a href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/privacy-policy-pub20a57ecd"></a><u>개인 정보 수집 및 이용</u></a>에 동의합니다
+          <input type="password" id="b-Password" name="password">
+          <div class="mark"></div>
+          <span id="PasswordEmptyError" class="error-message">! 비밀번호 필드는 필수 필드입니다.</span>
         </label>
       </div>
+      <!-- 체크박스 -->
+      <div class="communication">
+        <span class="b-checkbox">
+          <input type="checkbox" name="communication" id="b-communication" value="yes">
+          <span class="checkbox-label">
+            <label for="b-communication">
+              <span class="b-subscribe">구매 내역과 프로필을 기반으로 한 할인 정보 및 관련 소식들은 이메일로 받고 싶습니다. 구독은 언제든지 취소할 수 있습니다.</span>
+              <button id="b-email-btn" onclick="openModal()">이메일 구독 더 읽어보기</button>
+              <div class="overlay" id="overlay"></div>
+              <div id="modal" class="modal">
+                <div class="modal-content">              
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <div class="text-box">
+                    <div><h3>이렇게 제공해 드려요.</h3></div>
+                    <div><h5>이메일로 내 비즈니스와 관련된 할인혜택, 최신뉴스, 소식들을 받아 보세요. 여러분의 회사 프로필과 구매 정보, 온라인에서의 행동을 기반으로
+                          맞춤화된 콘텐츠가 제공됩니다.</h5></div>
+                  </div>
+                </div>
+              </div>
+          </span>
+        </span>
+      </div>
+      <div class="accept">
+          <span class="b-checkbox">
+            <input type="checkbox" name="accept" id="b-accept" value="yes">
+            <span class="checkbox-label">
+              <label for="b-accept">
+                <div>나는 나의 회사를 대표하여 다음을 확인합니다:
+                  <a target="_blank" aria-label="accept" href="https://www.ikea.com/kr/ko/customer-service/terms-conditions/" class="link" aria-disabled="false">이용약관</a>
+                </div>
+              </label>
+            </span>
+          </span>
+      </div>
+      <div class="personal">
+          <span class="b-checkbox">
+            <input type="checkbox" name="personal" id="b-personal" value="yes">
+            <span class="checkbox-symbol"></span>
+            <span class="checkbox-label">
+              <label for="b-personal">
+                <div>
+                  <a target="_blank" aria-label="personal" href="https://www.ikea.com/kr/ko/customer-service/privacy-policy/privacy-policy-pub20a57ecd" class="link" aria-disabled="false">개인 정보 수집 및 이용</a>에 동의합니다
+                </div>
+              </label>
+            </span>
+          </span>
+        </span>
+      </div>
+    <div class="b-submit">
+          <button aria-disabled="false" onclick="bopenModal()" type="button" class="b-submit-btn" id="b-submit-button">
+            <span class="btn-inner">
+            <span class="btn-text">이메일 주소 확인하기</span>
+          </span>
+          <div class="b-overlay" id="b-overlay"></div>
+          <div id="b-modal" class="b-modal">
+            <div class="b-modal-content">
+              <a href="./jspower_login.html">              
+                <span class="b-close" onclick="bcloseModal()">&times;</span></a>
+              <div class="b-submit-text">
+                <div><h6>로그인이 완료되었습니다.</h6></div>
+              </div>
+            </div>
+          </div>
+        </button>
+    </div>
     </form>
+  </main>
 </body>
 </html>
