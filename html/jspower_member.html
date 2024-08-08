@@ -12,10 +12,12 @@
 </head>
 
 <body>
+  <!-- 모달 오픈시 그림자 -->
+  <div id="member-shadow"></div>
   <!-- 모달창 -->
   <div id="member-modal">
     <div id="member-modal-top">
-      <div id="member-modal-close">X</div>
+      <div class="member-modal-close">X</div>
     </div>
     <img src="../img/modal.png" id="member-modal-img">
     <div id="member-modal-bottom">
@@ -98,14 +100,14 @@
       <div class="member-spaceBlock"></div>
       <label>
         <div class="member-text">이메일</div>
-        <input type="text" class="member-inputInfo member-email">
+        <input type="email" class="member-inputInfo member-email">
       </label>
       <div class="member-notice">! 이메일은 필수 입력창 입니다</div>
       <div class="member-spaceBlock"></div>
       <label class="member-pwFrame">
         <div class="member-text">비밀번호</div>
         <input type="password" class="member-inputInfo member-pw">
-        <img src="../img/m_open.png" class="member-img">
+        <img src="../img/m_close.png" class="member-img">
       </label>
       <div class="member-notice">! 비밀번호는 필수 입력창 입니다</div>
       <div class="member-spaceBlock"></div>
@@ -162,17 +164,17 @@
       <div class="member-spaceBlock"></div>
       <div class="member-spaceBlock"></div>
       <label class="member-submit">
-        <a href="../html/jspower_login.html">
           <input type="button" value="이메일 주소 확인 하기" class="member-submit-button">
-        </a>
       </label>
     </form>
     <div class="member-spaceBlock"></div>
     <div class="member-spaceBlock"></div>
     <div class="member-spaceBlock"></div>
   </main>
+  <!-- 가입완료 모달 -->
+  <div class="member-complete">가입이 완료 되었습니다
+    <a href="../html/jspower_login.html"><span class="member-modal-close">X</span></a>
   </div>
-
 </body>
 
 </html>

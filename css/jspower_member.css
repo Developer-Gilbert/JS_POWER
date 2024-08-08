@@ -6,7 +6,70 @@ body{
   display: flex;
   justify-content: center;
   position: relative;
-  /* background-color: rgba(0, 0, 0, 0.199); */
+}
+#member-shadow{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+#member-modal{
+  width: 480px;
+  height: 911px;
+  background-color: white;
+  position: fixed;
+  right: -500px;
+  top: 455px;
+  transform: translateY(-50%);
+  border-radius: 7px;
+  display: block;
+  transition: right 0.5s ease; /* 애니메이션 트랜지션 설정 */
+  border-radius: 7px;
+  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.4);
+  display: block;
+  z-index: 2;
+}
+#member-modal.show {
+  right: 0; /* 보여질 때의 위치 */
+}
+#member-modal-top{
+  width: 480px;
+  height: 88px;
+  position: relative;
+}
+.member-modal-close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#member-modal-img{
+  display: block;
+  width: 480px;
+  height: 719px;
+}
+#member-modal-bottom{
+  width: 480px;
+  height: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#member-modal-more{
+  width: 368px;
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 64px;
+  cursor: pointer;
+  font-size: .9rem;
+  background-color: #D7BFFF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .member-teamName{
   font-size: 50px;
@@ -204,60 +267,21 @@ a{
   top: 38px;
   cursor: pointer;
 }
-#member-modal{
-  width: 480px;
-  height: 911px;
+.member-complete{
+  width: 30%;
+  height: 70px;
   background-color: white;
-  position: fixed;
-  right: -500px;
-  top: 455px;
-  transform: translateY(-50%);
-  /* border: 1px solid black; */
-  border-radius: 7px;
-  display: block;
-  transition: right 0.5s ease; /* 애니메이션 트랜지션 설정 */
   border-radius: 7px;
   box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.8);
-  display: block;
-  z-index: 1000;
-}
-#member-modal.show {
-  right: 0; /* 보여질 때의 위치 */
-}
-#member-modal-top{
-  width: 480px;
-  height: 88px;
-  position: relative;
-}
-#member-modal-close{
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
-#member-modal-img{
-  display: block;
-  width: 480px;
-  height: 719px;
-}
-#member-modal-bottom{
-  width: 480px;
-  height: 104px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 50%;
+  font-size: 17px;
+  z-index: 2;
 }
-#member-modal-more{
-  width: 368px;
-  height: 56px;
-  padding: 0 32px;
-  border-radius: 64px;
-  cursor: pointer;
-  font-size: .9rem;
-  background-color: #D7BFFF;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.member-complete span{
+  top: 10px;
+  color: black;
 }
