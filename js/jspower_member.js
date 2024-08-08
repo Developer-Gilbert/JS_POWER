@@ -38,9 +38,9 @@ function blur() {
           formBox.style.border = "2px solid red";
         } else {
           blur.style.border = "2px solid red"; //위 태그 외 나머지 인풋박스 모두 해당
-          if (blur.classList.contains("member-gender")) { //성별은 필수가 아님
-            blur.style.border = "1px solid gray";
-          }
+          // if (blur.classList.contains("member-gender")) { //성별은 필수가 아님
+          //   blur.style.border = "1px solid gray"; // 아래 개별처리로 수정
+          // }
         }
       } else {
         noticeMsg[i].style.display = "none"; // 입력이 있는 경우 메시지 숨기기
@@ -50,6 +50,11 @@ function blur() {
 }
 
 blur();
+
+//필수입력이 아닌 창 blur이벤트 개별처리
+$(".member-gender").on('blur', () => {
+  $(".member-gender").css('border','1px solid gray');
+})
 
 //입력창에 값이 생기면 blur로 발생한 빨간테두리 원상복구 
 function checkValue() {
@@ -108,8 +113,10 @@ $(".member-age").on("mouseleave", () => {
 //모달창구현
 const $modal = $('#member-modal'); //모달창
 const $open = $('#member-openModal'); //열기버튼(클릭시 모달창 display : block)
-const $close = $('#member-modal-close'); //닫기버튼(클릭시 모달창 display : none)
-const $shadow = $('#member-modal-overlay');
+const $close = $('.member-modal-close'); //닫기버튼(클릭시 모달창 display : none)
+const $shadow = $('#member-shadow'); //모달 오픈시 어둡게
+const $submit = $('.member-submit-button'); //가입 완료버튼
+const $complete = $('.member-complete'); //가입 완료모달
 // console.log($modal);
 // console.log($open);
 // console.log($close);
@@ -118,9 +125,24 @@ const $shadow = $('#member-modal-overlay');
 // 모달 열기
 $open.on('click', () => {
   $modal.addClass('show'); // 모달을 열 때 'show' 클래스를 추가하여 애니메이션 시작
+  $shadow.css('display', 'block');
 });
 
 //모달 닫기
 $close.on('click', () => {
   $modal.removeClass('show'); // 모달을 닫을 때 'show' 클래스를 제거하여 애니메이션 시작
+  $shadow.css('display', 'none');
 });
+
+//모달창 밖 클릭시 모달 닫기
+$shadow.on('click', () => {
+  $modal.removeClass('show');
+  $shadow.css('display', 'none');
+  $complete.css('display', 'none')
+})
+
+//이메일 주소 확인 버튼 클릭시 안내모달
+$submit.on('click', () => {
+  $complete.css('display', 'flex');
+  $shadow.css('display', 'block');
+})
